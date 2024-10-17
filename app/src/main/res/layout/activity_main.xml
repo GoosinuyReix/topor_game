@@ -42,11 +42,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="37dp"
         android:layout_marginTop="140dp"
         android:text="Угадай топор"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,5 +75,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_topor_txt" />
+
+    <TextView
+        android:id="@+id/percent_txt"
+        android:layout_width="229dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="158dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
