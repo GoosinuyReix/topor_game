@@ -13,4 +13,6 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <color name="textColorPrimary">#000000</color>
+    <color name="backgroundForButton">#FFFFFF</color>
 </resources>
