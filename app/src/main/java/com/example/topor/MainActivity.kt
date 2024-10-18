@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.topor.databinding.ActivityMainBinding
 import kotlin.random.Random
 import android.view.View
+import java.util.*
+import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +37,9 @@ class MainActivity : AppCompatActivity() {
             binding.percentTxt.text =
                 String.format("Процент правильных ответов равен %.2f%%", percent)
             binding.percentTxt.visibility = View.VISIBLE
+            Timer().schedule(400){
+                resetButtonColors(binding);
+            }
             right_answer = Random.nextInt(1, 4)
         }
         binding.secondTopor.setOnClickListener {
@@ -51,6 +56,9 @@ class MainActivity : AppCompatActivity() {
             percent = (right_clicks.toDouble() / count_of_clicks.toDouble()) * 100.0
             binding.percentTxt.text = String.format("Процент правильных ответов равен %.2f%%", percent)
             binding.percentTxt.visibility = View.VISIBLE
+            Timer().schedule(400){
+                resetButtonColors(binding);
+            }
             right_answer = Random.nextInt(1, 4)
         }
 
@@ -68,6 +76,9 @@ class MainActivity : AppCompatActivity() {
             percent = (right_clicks.toDouble() / count_of_clicks.toDouble()) * 100.0
             binding.percentTxt.text = String.format("Процент правильных ответов равен %.2f%%", percent)
             binding.percentTxt.visibility = View.VISIBLE
+            Timer().schedule(400){
+                resetButtonColors(binding);
+            }
             right_answer = Random.nextInt(1, 4)
         }
 
@@ -77,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             binding.percentTxt.text = "Процент правильных ответов равен 0%"
             binding.myToporTxt.visibility = View.INVISIBLE
             binding.rightToporTxt.visibility = View.INVISIBLE
-            resetButtonColors(binding)
+            binding.percentTxt.visibility = View.INVISIBLE
         }
     }
 
