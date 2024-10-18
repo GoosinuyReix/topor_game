@@ -50,6 +50,14 @@ class MainActivity : AppCompatActivity() {
             binding.percentTxt.text = String.format("Процент правильных ответов равен %.2f%%", percent)
             binding.percentTxt.visibility = View.VISIBLE
         }
+
+        binding.restartBtn.setOnClickListener {
+            count_of_clicks = 0
+            right_clicks = 0
+            binding.percentTxt.text = "Процент правильных ответов равен 0%"
+            binding.myToporTxt.visibility = View.INVISIBLE
+            binding.rightToporTxt.visibility = View.INVISIBLE
+        }
     }
     private fun checkAnswer(my_answer: Int, right_answer: Int, binding: ActivityMainBinding):Boolean {
         if (my_answer == right_answer) {
